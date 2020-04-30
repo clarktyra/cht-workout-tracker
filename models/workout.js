@@ -30,7 +30,13 @@ const workoutSchema = new Schema({
       set: Number
     }
   ]
-});
+},
+{
+  toJSON: {
+    virtuals: true
+  }
+}
+);
 
 const Workout = mongoose.model("Workout", workoutSchema);
 
